@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import Footer from "./components/footer.svelte";
+  import Header from "./components/header.svelte";
+  import ProductCard from "./components/productCard.svelte";
+  import Products from "./components/products.svelte";
+
+  export let data;
+</script>
+<div class="">
+  <Header bannerData={data.bannerData[0]}/>
+  <Products products={data.productData}/>
+  <Footer/>
+</div>
